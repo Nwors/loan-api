@@ -1,0 +1,16 @@
+framework:
+    messenger:
+        transports:
+            command_bus:
+                dsn: 'doctrine://default?queue_name=command'
+            query_bus:
+                dsn: 'doctrine://default?queue_name=query'
+
+        default_bus: command.bus
+
+        buses:
+            command.bus:
+                middleware:
+                    - doctrine_transaction
+            query.bus:
+                middleware:

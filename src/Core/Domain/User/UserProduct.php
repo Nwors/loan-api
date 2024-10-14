@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Core\Domain\User;
 
-use App\Core\Domain\Common\AggregateRoot;
+use App\Core\Domain\Common\Entity;
 use App\Core\Domain\Common\UUID;
 use App\Core\Domain\Product\Product;
 
-class UserProduct extends AggregateRoot
+class UserProduct extends Entity
 {
     private \DateTimeImmutable $createdAt;
     private \DateTimeImmutable $updatedAt;
